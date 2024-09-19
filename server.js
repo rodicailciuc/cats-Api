@@ -3,6 +3,9 @@ import dotenv from 'dotenv';
 
 
 
+import catRoutes from './routes/cat.js'
+
+
 
 // configure dotenv
 dotenv.config();
@@ -18,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // use routes
-
+app.use('/cat', catRoutes)
 
 // error
 app.use((err, req, res, next) => {
